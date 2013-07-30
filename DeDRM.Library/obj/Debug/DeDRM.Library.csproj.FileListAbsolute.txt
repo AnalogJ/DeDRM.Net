@@ -1,0 +1,5 @@
+D:\GitRepository\DeDRM.Net\DeDRM.Library\bin\Debug\DeDRM.Library.dll
+D:\GitRepository\DeDRM.Net\DeDRM.Library\bin\Debug\DeDRM.Library.pdb
+D:\GitRepository\DeDRM.Net\DeDRM.Library\obj\Debug\DeDRM.Library.csprojResolveAssemblyReference.cache
+D:\GitRepository\DeDRM.Net\DeDRM.Library\obj\Debug\DeDRM.Library.dll
+D:\GitRepository\DeDRM.Net\DeDRM.Library\obj\Debug\DeDRM.Library.pdb
