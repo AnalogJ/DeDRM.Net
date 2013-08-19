@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace DeDRM.Library.Amazon.Mobi
 {
+    //TODO: place IRemoveDrm Interface. 
     public class MobiBook {
 
     private ArraySlice mEncMobiBook;

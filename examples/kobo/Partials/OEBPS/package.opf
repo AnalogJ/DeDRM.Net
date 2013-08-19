@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><package xmlns="http://www.idpf.org/2007/opf" unique-identifier="isbn" version="2.0">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+      <dc:title>Partials</dc:title>
+      <dc:creator opf:role="aut">Dan Wells</dc:creator>
+      <dc:publisher>HarperCollins</dc:publisher>
+      <dc:identifier id="isbn" opf:scheme="isbn">9780062071064</dc:identifier>
+      <dc:language>en</dc:language>
+      <dc:rights>All rights reserved</dc:rights>
+      <dc:description/>
+  </metadata>
+
+  <manifest>
+    <item href="images/9780062071064_Cover.png" id="my-cover-image" media-type="image/png"/>
+    <item href="images/9780062071064_Cover.jpg" id="cover-image" media-type="image/jpg"/>
+    <item href="images/cpy.jpg" id="cpy" media-type="image/jpeg"/>
+    <item href="images/tit.jpg" id="tit" media-type="image/jpeg"/>
+    <item href="styles/stylesheet.css" id="css" media-type="text/css"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="page-template.xpgt" id="pt" media-type="application/vnd.adobe-page-template+xml"/>
+    <item href="xhtml/Acknowledgment.html" id="Acknowledgment" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter001.html" id="Chapter001" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter002.html" id="Chapter002" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter003.html" id="Chapter003" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter004.html" id="Chapter004" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter005.html" id="Chapter005" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter006.html" id="Chapter006" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter007.html" id="Chapter007" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter008.html" id="Chapter008" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter009.html" id="Chapter009" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter010.html" id="Chapter010" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter011.html" id="Chapter011" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter012.html" id="Chapter012" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter013.html" id="Chapter013" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter014.html" id="Chapter014" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter015.html" id="Chapter015" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter016.html" id="Chapter016" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter017.html" id="Chapter017" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter018.html" id="Chapter018" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter019.html" id="Chapter019" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter020.html" id="Chapter020" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter021.html" id="Chapter021" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter022.html" id="Chapter022" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter023.html" id="Chapter023" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter024.html" id="Chapter024" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter025.html" id="Chapter025" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter026.html" id="Chapter026" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter027.html" id="Chapter027" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter028.html" id="Chapter028" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter029.html" id="Chapter029" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter030.html" id="Chapter030" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter031.html" id="Chapter031" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter032.html" id="Chapter032" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter033.html" id="Chapter033" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter034.html" id="Chapter034" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter035.html" id="Chapter035" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter036.html" id="Chapter036" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter037.html" id="Chapter037" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter038.html" id="Chapter038" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Chapter039.html" id="Chapter039" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Content.html" id="Content" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Copyrights.html" id="Copyrights" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Cover.html" id="Cover" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Dedication.html" id="Dedication" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Part001.html" id="Part001" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Part002.html" id="Part002" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Part003.html" id="Part003" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Title.html" id="Title" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Abouttheauthor.html" id="Abouttheauthor" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Aboutthepublisher.html" id="Aboutthepublisher" media-type="application/xhtml+xml"/>
+    <item href="xhtml/Credits.html" id="Credits" media-type="application/xhtml+xml"/>
+  </manifest>
+
+  <spine toc="ncx">
+    <itemref idref="Cover" linear="yes"/>
+    <itemref idref="Title" linear="yes"/>
+    <itemref idref="Dedication" linear="yes"/>
+    <itemref idref="Content" linear="yes"/>
+    <itemref idref="Part001" linear="yes"/>
+    <itemref idref="Chapter001" linear="yes"/>
+    <itemref idref="Chapter002" linear="yes"/>
+    <itemref idref="Chapter003" linear="yes"/>
+    <itemref idref="Chapter004" linear="yes"/>
+    <itemref idref="Chapter005" linear="yes"/>
+    <itemref idref="Chapter006" linear="yes"/>
+    <itemref idref="Chapter007" linear="yes"/>
+    <itemref idref="Chapter008" linear="yes"/>
+    <itemref idref="Chapter009" linear="yes"/>
+    <itemref idref="Chapter010" linear="yes"/>
+    <itemref idref="Chapter011" linear="yes"/>
+    <itemref idref="Chapter012" linear="yes"/>
+    <itemref idref="Part002" linear="yes"/>
+    <itemref idref="Chapter013" linear="yes"/>
+    <itemref idref="Chapter014" linear="yes"/>
+    <itemref idref="Chapter015" linear="yes"/>
+    <itemref idref="Chapter016" linear="yes"/>
+    <itemref idref="Chapter017" linear="yes"/>
+    <itemref idref="Chapter018" linear="yes"/>
+    <itemref idref="Chapter019" linear="yes"/>
+    <itemref idref="Chapter020" linear="yes"/>
+    <itemref idref="Chapter021" linear="yes"/>
+    <itemref idref="Chapter022" linear="yes"/>
+    <itemref idref="Chapter023" linear="yes"/>
+    <itemref idref="Chapter024" linear="yes"/>
+    <itemref idref="Chapter025" linear="yes"/>
+    <itemref idref="Chapter026" linear="yes"/>
+    <itemref idref="Chapter027" linear="yes"/>
+    <itemref idref="Chapter028" linear="yes"/>
+    <itemref idref="Part003" linear="yes"/>
+    <itemref idref="Chapter029" linear="yes"/>
+    <itemref idref="Chapter030" linear="yes"/>
+    <itemref idref="Chapter031" linear="yes"/>
+    <itemref idref="Chapter032" linear="yes"/>
+    <itemref idref="Chapter033" linear="yes"/>
+    <itemref idref="Chapter034" linear="yes"/>
+    <itemref idref="Chapter035" linear="yes"/>
+    <itemref idref="Chapter036" linear="yes"/>
+    <itemref idref="Chapter037" linear="yes"/>
+    <itemref idref="Chapter038" linear="yes"/>
+    <itemref idref="Chapter039" linear="yes"/>
+    <itemref idref="Acknowledgment" linear="yes"/>
+    <itemref idref="Abouttheauthor" linear="yes"/>
+    <itemref idref="Credits" linear="yes"/>
+    <itemref idref="Copyrights" linear="yes"/>
+    <itemref idref="Aboutthepublisher" linear="yes"/>
+  </spine>
+
+  <guide>
+    <reference href="xhtml/Cover.html" title="Cover Page" type="cover"/>
+    <reference href="xhtml/Cover.html" title="Cover" type="cover-page"/>
+    <reference href="xhtml/Copyrights.html" title="Copyright" type="copyright-page"/>
+    <reference href="xhtml/Content.html" title="Content" type="toc"/>
+    <reference href="xhtml/Title.html" title="Startup Page" type="start"/>
+  </guide>
+</package>

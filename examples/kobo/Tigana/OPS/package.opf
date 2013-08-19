@@ -1,0 +1,105 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?><package xmlns="http://www.idpf.org/2007/opf" unique-identifier="p9780143171591" version="2.0">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+			<dc:creator opf:role="author">Guy Gavriel Kay</dc:creator>
+			<dc:source>URN:ISBN:978-0-14-317159-1</dc:source>
+			<dc:identifier id="p9780143171591">URN:ISBN:978-0-14-317159-1</dc:identifier>
+			<dc:publisher>Penguin Group</dc:publisher>
+			<dc:language>en-US</dc:language>
+			<dc:type>Text</dc:type>
+			<dc:title>Tigana</dc:title>
+			<dc:format>784 pages</dc:format>
+			<dc:rights>All rights reserved</dc:rights>
+			<meta content="cover-image" name="cover"/>
+	</metadata>
+	<manifest>
+	<item href="toc.ncx" id="ncx" media-type="application/xhtml+xml"/>
+	<item href="images/9780143171591.jpg" id="cover-image" media-type="image/jpeg"/>
+	<item href="xhtml/cover.xml" id="html-cover-page" media-type="application/xhtml+xml"/>
+	<item href="xhtml/frontmatter.html" id="frontmatter" media-type="application/xhtml+xml"/>
+	<item href="xhtml/title.html" id="title" media-type="application/xhtml+xml"/>
+	<item href="xhtml/copyright.html" id="copyright" media-type="application/xhtml+xml"/>
+	<item href="xhtml/dedication.html" id="dedication" media-type="application/xhtml+xml"/>
+	<item href="xhtml/frontmatter01.html" id="frontmatter01" media-type="application/xhtml+xml"/>
+	<item href="xhtml/frontmatter02.html" id="frontmatter02" media-type="application/xhtml+xml"/>
+	<item href="xhtml/frontmatter03.html" id="frontmatter03" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part01.html" id="part01" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part01chapter01.html" id="part01chapter01" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part01chapter02.html" id="part01chapter02" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part01chapter03.html" id="part01chapter03" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part01chapter04.html" id="part01chapter04" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part01chapter05.html" id="part01chapter05" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part01chapter06.html" id="part01chapter06" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part02.html" id="part02" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part02chapter07.html" id="part02chapter07" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part02chapter08.html" id="part02chapter08" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part03.html" id="part03" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part03chapter09.html" id="part03chapter09" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part03chapter10.html" id="part03chapter10" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part03chapter11.html" id="part03chapter11" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part03chapter12.html" id="part03chapter12" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part04.html" id="part04" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part04chapter13.html" id="part04chapter13" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part04chapter14.html" id="part04chapter14" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part04chapter15.html" id="part04chapter15" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part04chapter16.html" id="part04chapter16" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part05.html" id="part05" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part05chapter17.html" id="part05chapter17" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part05chapter18.html" id="part05chapter18" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part05chapter19.html" id="part05chapter19" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part05chapter20.html" id="part05chapter20" media-type="application/xhtml+xml"/>
+	<item href="xhtml/backmatter01.html" id="backmatter01" media-type="application/xhtml+xml"/>
+	<item href="xhtml/backmatter02.html" id="backmatter02" media-type="application/xhtml+xml"/>
+	<item href="styles/stylesheet.css" id="css" media-type="text/css"/>
+	<item href="page-template.xpgt" id="pt" media-type="application/vnd.adobe-page-template+xml"/>
+	<item href="page-map.xml" id="map" media-type="application/oebps-page-map+xml"/>
+	<item href="images/176-01.jpg" id="image1" media-type="image/jpeg"/>
+	<item href="images/f0008-01.jpg" id="image2" media-type="image/jpeg"/>
+	<item href="images/f000x-01.jpg" id="image3" media-type="image/jpeg"/>
+	<item href="images/f00iv-01.jpg" id="image4" media-type="image/jpeg"/>
+	<item href="images/f0450-01.jpg" id="image5" media-type="image/jpeg"/>
+	<item href="images/f284-01.jpg" id="image6" media-type="image/jpeg"/>
+	<item href="images/fig606-01.jpg" id="image7" media-type="image/jpeg"/>
+	<item href="images/publisher.jpg" id="image8" media-type="image/jpeg"/>
+	<item href="images/star.jpg" id="image9" media-type="image/jpeg"/>
+</manifest>
+	<spine page-map="map" toc="ncx">
+                <itemref idref="html-cover-page" linear="no"/>
+                <itemref idref="frontmatter"/>
+                <itemref idref="title"/>
+                <itemref idref="copyright"/>
+                <itemref idref="dedication"/>
+                <itemref idref="frontmatter01"/>
+                <itemref idref="frontmatter02"/>
+                <itemref idref="frontmatter03"/>
+                <itemref idref="part01"/>
+                <itemref idref="part01chapter01"/>
+                <itemref idref="part01chapter02"/>
+                <itemref idref="part01chapter03"/>
+                <itemref idref="part01chapter04"/>
+                <itemref idref="part01chapter05"/>
+                <itemref idref="part01chapter06"/>
+                <itemref idref="part02"/>
+                <itemref idref="part02chapter07"/>
+                <itemref idref="part02chapter08"/>
+                <itemref idref="part03"/>
+                <itemref idref="part03chapter09"/>
+                <itemref idref="part03chapter10"/>
+                <itemref idref="part03chapter11"/>
+                <itemref idref="part03chapter12"/>
+                <itemref idref="part04"/>
+                <itemref idref="part04chapter13"/>
+                <itemref idref="part04chapter14"/>
+                <itemref idref="part04chapter15"/>
+                <itemref idref="part04chapter16"/>
+                <itemref idref="part05"/>
+                <itemref idref="part05chapter17"/>
+                <itemref idref="part05chapter18"/>
+                <itemref idref="part05chapter19"/>
+                <itemref idref="part05chapter20"/>
+                <itemref idref="backmatter01"/>
+                <itemref idref="backmatter02"/>
+	</spine>
+<guide>
+	<reference href="cover.xml" title="Cover Image" type="cover"/>
+</guide>
+</package>

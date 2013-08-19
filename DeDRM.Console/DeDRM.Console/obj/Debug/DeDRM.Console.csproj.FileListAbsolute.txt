@@ -1,8 +1,12 @@
 D:\GitRepository\DeDRM.Net\DeDRM.Console\DeDRM.Console\bin\Debug\DeDRM.Console.exe.config
+D:\GitRepository\DeDRM.Net\DeDRM.Console\DeDRM.Console\obj\Debug\DeDRM.Console.csprojResolveAssemblyReference.cache
 D:\GitRepository\DeDRM.Net\DeDRM.Console\DeDRM.Console\bin\Debug\DeDRM.Console.exe
 D:\GitRepository\DeDRM.Net\DeDRM.Console\DeDRM.Console\bin\Debug\DeDRM.Console.pdb
 D:\GitRepository\DeDRM.Net\DeDRM.Console\DeDRM.Console\bin\Debug\DeDRM.Library.dll
+D:\GitRepository\DeDRM.Net\DeDRM.Console\DeDRM.Console\bin\Debug\Ionic.Zip.dll
 D:\GitRepository\DeDRM.Net\DeDRM.Console\DeDRM.Console\bin\Debug\DeDRM.Library.pdb
-D:\GitRepository\DeDRM.Net\DeDRM.Console\DeDRM.Console\obj\Debug\DeDRM.Console.csprojResolveAssemblyReference.cache
+D:\GitRepository\DeDRM.Net\DeDRM.Console\DeDRM.Console\bin\Debug\Ionic.Zip.xml
 D:\GitRepository\DeDRM.Net\DeDRM.Console\DeDRM.Console\obj\Debug\DeDRM.Console.exe
 D:\GitRepository\DeDRM.Net\DeDRM.Console\DeDRM.Console\obj\Debug\DeDRM.Console.pdb
+D:\GitRepository\DeDRM.Net\DeDRM.Console\DeDRM.Console\bin\Debug\BouncyCastle.Crypto.dll
+D:\GitRepository\DeDRM.Net\DeDRM.Console\DeDRM.Console\bin\Debug\BouncyCastle.Crypto.pdb

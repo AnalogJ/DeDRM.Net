@@ -1,0 +1,524 @@
+<?xml version="1.0"?><encryption xmlns="urn:oasis:names:tc:opendocument:xmlns:container">
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter034.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter005.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter011.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter035.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Part002.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/images/9780062071064_Cover.png"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter022.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter019.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/images/9780062071064_Cover.jpg"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter025.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter036.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter014.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter010.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter037.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Copyrights.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Part001.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Credits.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter033.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Acknowledgment.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Aboutthepublisher.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Content.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter028.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter020.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter003.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter038.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Dedication.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter026.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Abouttheauthor.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/styles/stylesheet.css"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter023.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter001.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter018.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter039.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/toc.ncx"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/page-template.xpgt"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Cover.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Part003.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter021.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/images/cpy.jpg"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter030.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter031.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter015.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/images/tit.jpg"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter006.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter012.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter029.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter016.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter004.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter024.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter027.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter002.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter017.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Title.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter007.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter009.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter013.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter032.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+  <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#">
+    <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
+    <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <resource xmlns="http://ns.adobe.com/adept">urn:uuid:b086259f-a534-48ce-85d8-0d714f5f6efa</resource>
+    </KeyInfo>
+    <CipherData>
+      <CipherReference URI="OEBPS/xhtml/Chapter008.html"></CipherReference>
+    </CipherData>
+  </EncryptedData>
+</encryption>

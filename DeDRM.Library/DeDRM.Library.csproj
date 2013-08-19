@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\DeDRM.Console\packages\DotNetZip.1.9.1.8\lib\net20\Ionic.Zip.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,11 +46,27 @@
     <Compile Include="Amazon\Mobi\MobiBook.cs" />
     <Compile Include="Amazon\Mobi\MobiHeader.cs" />
     <Compile Include="Amazon\Mobi\Section.cs" />
+    <Compile Include="Apple\Epub\iBook.cs" />
+    <Compile Include="Base\EpubHandler.cs" />
+    <Compile Include="Base\IRemoveDrm.cs" />
+    <Compile Include="Base\MobiHandler.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Crypto\RSA.cs" />
+    <Compile Include="Kobo\Epub\Handler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Apple\" />
-    <Folder Include="BarnesNobel\" />
+    <Folder Include="Amazon\Epub\" />
+    <Folder Include="BarnesNoble\Epub\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docs\encryption.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

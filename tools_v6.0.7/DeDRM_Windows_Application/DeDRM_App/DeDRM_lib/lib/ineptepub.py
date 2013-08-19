@@ -53,7 +53,8 @@ import zipfile
 from zipfile import ZipInfo, ZipFile, ZIP_STORED, ZIP_DEFLATED
 from contextlib import closing
 import xml.etree.ElementTree as etree
-
+import logging
+logging.basicConfig(filename='example.log',level=logging.DEBUG)
 # Wrap a stream so that output gets flushed immediately
 # and also make sure that any unicode strings get
 # encoded using "replace" before writing them.
@@ -310,7 +311,12 @@ def _load_crypto_pycrypto():
         def __init__(self, der):
             key = ASN1Parser([ord(x) for x in der])
             key = [key.getChild(x).value for x in xrange(1, 4)]
+            logging.info('the keys for RSA');
+            
+            [logging.info([":".join(hex(y) for y in x)]) for x in key]
             key = [self.bytesToNumber(v) for v in key]
+            logging.info('the numbers for RSA keys');
+            [logging.info(x) for x in key]
             self._rsa = _RSA.construct(key)
 
         def bytesToNumber(self, bytes):
@@ -413,6 +419,8 @@ def decryptBook(userkey, inpath, outpath):
                 return 1
             bookkey = rsa.decrypt(bookkey.decode('base64'))
             # Padded as per RSAES-PKCS1-v1_5
+            logging.info('the decrypted book key')
+            logging.info(":".join(c.encode("hex") for c in bookkey))
             if bookkey[-17] != '\x00':
                 print u"Could not decrypt {0:s}. Wrong key".format(os.path.basename(inpath))
                 return 2
