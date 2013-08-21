@@ -17,7 +17,7 @@ namespace DeDRM.Library.Base
         //NameSpaces
         protected XNamespace adeptns = "http://ns.adobe.com/adept";
         protected XNamespace applens = "http://itunes.apple.com/ns/epub";
-        
+        protected XNamespace encryptionns = "http://www.w3.org/2001/04/xmlenc#";
         public void OpenFile(string filePath)
         {
             inputZip = ZipFile.Read(filePath);
@@ -35,8 +35,7 @@ namespace DeDRM.Library.Base
                 ZipEntry rightsXml = inputZip["META-INF/rights.xml"];
                 if (rightsXml != null)
                 {
-
-                    XElement xRoot = XElement.Load(rightsXml.InputStream);
+                    XElement xRoot = XElement.Load(rightsXml.OpenReader());
                     
 
                     var adeptDrm = xRoot.Descendants(adeptns + "operatorURL");
