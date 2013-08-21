@@ -410,10 +410,13 @@ def decryptBook(userkey, inpath, outpath):
         for name in META_NAMES:
             namelist.remove(name)
         try:
+			
             rights = etree.fromstring(inf.read('META-INF/rights.xml'))
             adept = lambda tag: '{%s}%s' % (NSMAP['adept'], tag)
             expr = './/%s' % (adept('encryptedKey'),)
             bookkey = ''.join(rights.findtext(expr))
+            logging.info('bookkey org:')
+            logging.info(bookkey)
             if len(bookkey) != 172:
                 print u"{0:s} is not a secure Adobe Adept ePub.".format(os.path.basename(inpath))
                 return 1

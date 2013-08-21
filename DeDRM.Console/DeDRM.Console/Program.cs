@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
@@ -24,16 +25,33 @@ namespace DeDRM.Console
         {
             //MobiBook book = new MobiBook("C:\\test\\adobekey_1.der");
             Byte[] derContent = File.ReadAllBytes("C:\\test\\adobekey_1.der");
-            var cipher = DecodeRSAPrivateKey(derContent);
+
+            String base64DerContent = Convert.ToBase64String(derContent);
+
+
+            derContent = Convert.FromBase64String(base64DerContent); //base64DerContent is the "Input DER Private Key" above
+            var rsa = DecodeRSAPrivateKey(derContent);
+            Byte[] cipher_text_data = Convert.FromBase64String("e1algxNK5vfiLQmN42bQf9CHJnRGH06w13P+ObHx5U7XJWbCsh9HKclXX88b2peEG4U3K4WC+dSNGLEPe8d3bPwxlBOYXVgsAHKLrgD7gXJDOG+gMawUsUlVx+hWPESITHXDscbcM6zASUuIWGtPkJw3r00MwJy9ZzYqfr2OiJg=");
+            System.Console.WriteLine("Cipher TExt Lenght: {0}", cipher_text_data.Length);
+            Byte[] raw = rsa.Decrypt(cipher_text_data, false);
+            string hex = BitConverter.ToString(raw);
+            System.Console.WriteLine("Decrypted: " + hex);
+
+            //System.Console.WriteLine(base64DerContent);
+            //derContent = Convert.FromBase64String(base64DerContent);
+
+            //var cipher = DecodeRSAPrivateKey(derContent);
             
 
             
-            Byte[] bookkey_data;    
-            var bookkey = Utilities.DecodeBase64("e1algxNK5vfiLQmN42bQf9CHJnRGH06w13P+ObHx5U7XJWbCsh9HKclXX88b2peEG4U3K4WC+dSNGLEPe8d3bPwxlBOYXVgsAHKLrgD7gXJDOG+gMawUsUlVx+hWPESITHXDscbcM6zASUuIWGtPkJw3r00MwJy9ZzYqfr2OiJg=",out bookkey_data);
+            //Byte[] bookkey_data;    
+            //var bookkey = Utilities.DecodeBase64("e1algxNK5vfiLQmN42bQf9CHJnRGH06w13P+ObHx5U7XJWbCsh9HKclXX88b2peEG4U3K4WC+dSNGLEPe8d3bPwxlBOYXVgsAHKLrgD7gXJDOG+gMawUsUlVx+hWPESITHXDscbcM6zASUuIWGtPkJw3r00MwJy9ZzYqfr2OiJg=",out bookkey_data);
              
-            Byte[] raw = cipher.Decrypt(bookkey_data, false);
-            string hex = BitConverter.ToString(raw);
-            System.Console.WriteLine("Decrypted: " + hex);
+            //Byte[] raw = cipher.Decrypt(bookkey_data, false);
+            //string hex = BitConverter.ToString(raw);
+            //System.Console.WriteLine("Decrypted: " + hex);
+            //System.Console.WriteLine("Length:" + raw.Length);
+
             ////var bookkey = "e1algxNK5vfiLQmN42bQf9CHJnRGH06w13";
 
             //    IAsymmetricBlockCipher cipher = new RsaEngine();
@@ -121,14 +139,14 @@ namespace DeDRM.Console
                 System.Console.WriteLine("showing components ..");
                 if (true)
                 {
-                    System.Console.WriteLine("\nModulus", MODULUS);
-                    System.Console.WriteLine("\nExponent", E);
-                    System.Console.WriteLine("\nD", D);
-                    System.Console.WriteLine("\nP", P);
-                    System.Console.WriteLine("\nQ", Q);
-                    System.Console.WriteLine("\nDP", DP);
-                    System.Console.WriteLine("\nDQ", DQ);
-                    System.Console.WriteLine("\nIQ", IQ);
+                    System.Console.WriteLine("Modulus: {0}", MODULUS.Length);
+                    System.Console.WriteLine("Exponent: {0}", E.Length);
+                    System.Console.WriteLine("D: {0}", D.Length);
+                    System.Console.WriteLine("P: {0}", P.Length);
+                    System.Console.WriteLine("Q: {0}", Q.Length);
+                    System.Console.WriteLine("DP: {0}", DP.Length);
+                    System.Console.WriteLine("DQ: {0}", DQ.Length);
+                    System.Console.WriteLine("IQ: {0}", IQ.Length);
                 }
 
                 // ------- create RSACryptoServiceProvider instance and initialize with public key -----
