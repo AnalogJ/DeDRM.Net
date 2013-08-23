@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -62,38 +63,68 @@ namespace DeDRM.Library.Kobo.Epub
             XDocument encryptionXml = XDocument.Load(encryptionFile.OpenReader());
             
             var encryptedFiles =
-                encryptionXml.Root.Elements(encryptionns + "EncryptedData").Elements(encryptionns+"CipherData").Elements(encryptionns+"CipherReference").Attributes("URI");//"/CipherData/CipherReference");
-
-
-
-            foreach (var zipEntry in inputZip)
+                encryptionXml.Root.Elements(encryptionns + "EncryptedData").Elements(encryptionns+"CipherData").Elements(encryptionns+"CipherReference").Attributes("URI").Select(x=> x.Value.ToLowerInvariant());//"/CipherData/CipherReference");
+            //using (RijndaelManaged aes = new RijndaelManaged())
+            using (AesCryptoServiceProvider aes = new AesCryptoServiceProvider())
             {
-                //Ignore specific unencypted files. //http://www.idpf.org/epub/30/spec/epub30-ocf.html#sec-container-metainf-encryption.xml
-                if ((String.Compare(zipEntry.FileName, "mimetype", true) == 0) ||
-                    (String.Compare(zipEntry.FileName, "META-INF/rights.xml") == 0) ||
-                    (String.Compare(zipEntry.FileName, "META-INF/container.xml") == 0) ||
-                    (String.Compare(zipEntry.FileName, "META-INF/manifest.xml") == 0) ||
-                    (String.Compare(zipEntry.FileName, "META-INF/signatures.xml") == 0) ||
-                    (String.Compare(zipEntry.FileName, "META-INF/rights.xml") == 0) ||
-                    (String.Compare(zipEntry.FileName, "META-INF/encryption.xml") == 0))
+
+                aes.Mode = CipherMode.CBC;
+                aes.Key = bookkey_plaintext_bytes;
+                aes.IV = new byte[] { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
+
+                foreach (var zipEntry in inputZip)
                 {
-                    continue;
+                    //Ignore specific unencypted files. //http://www.idpf.org/epub/30/spec/epub30-ocf.html#sec-container-metainf-encryption.xml
+                    if ((String.Compare(zipEntry.FileName, "mimetype", true) == 0) ||
+                        (String.Compare(zipEntry.FileName, "META-INF/rights.xml") == 0) ||
+                        (String.Compare(zipEntry.FileName, "META-INF/container.xml") == 0) ||
+                        (String.Compare(zipEntry.FileName, "META-INF/manifest.xml") == 0) ||
+                        (String.Compare(zipEntry.FileName, "META-INF/signatures.xml") == 0) ||
+                        (String.Compare(zipEntry.FileName, "META-INF/rights.xml") == 0) ||
+                        (String.Compare(zipEntry.FileName, "META-INF/encryption.xml") == 0))
+                    {
+                        continue;
+                    }
+
+                    try
+                    {
+                        if (encryptedFiles.Contains(zipEntry.FileName.ToLowerInvariant()))
+                        {
+                            // Create a decrytor to perform the stream transform.
+                            ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
+
+                            using (var msDecrypt = new MemoryStream())
+                            {
+                                zipEntry.Extract(msDecrypt);
+                                msDecrypt.Seek(0, System.IO.SeekOrigin.Begin);
+
+                                using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+                                {
+                                    using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                                    {
+                                        var plaintext = srDecrypt.ReadToEnd();
+                                        Console.WriteLine(plaintext);
+                                    }
+                                    
+                                }
+
+                            }
+                            
+
+                        }
+
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        //do nothing, gotta catch em all.
+                    }
+
+
                 }
-
-                try
-                {
-
-
-
-
-                }
-                catch (Exception ex)
-                {
-                    //do nothing, gotta catch em all.
-                }
-
-
             }
+
 
         }
 
