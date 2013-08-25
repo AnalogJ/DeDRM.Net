@@ -27,6 +27,23 @@ namespace DeDRM.Library.Kobo.Epub
 
         }
 
+        private void GenerateBookDecryptionKey(String encryptedKey, out Byte[] bookkey_plaintext_bytes)
+        {
+            //Create a new instance of RSACryptoServiceProvider to generate 
+            //public and private key data. 
+            bookkey_plaintext_bytes = null;
+            using (var rsa = Crypto.Crypto.DecodeRSAPrivateKey(DerContent))
+            {
+
+                var bookkey_ciphertext_bytes = Convert.FromBase64String(encryptedKey);
+
+                bookkey_plaintext_bytes = rsa.Decrypt(bookkey_ciphertext_bytes, false);
+                string hex = BitConverter.ToString(bookkey_plaintext_bytes);
+                System.Console.WriteLine("Decrypted: " + hex);
+
+            }
+        }
+
         public override void RemoveDrm(string outputFile)
         {
             //ensure that book has DRM
@@ -47,31 +64,26 @@ namespace DeDRM.Library.Kobo.Epub
                 throw new Exception("This is not a secure Adobe Adept ePub");
             }
 
-            //Create a new instance of RSACryptoServiceProvider to generate 
-            //public and private key data. 
-            Byte[] bookkey_plaintext_bytes = null;
-            using (var rsa = Crypto.Crypto.DecodeRSAPrivateKey(DerContent))
-            {
+            Byte[] bookkey_plaintext_bytes;
+            //Decrypt the bookkey using the encrypted key stored in the book. 
+            GenerateBookDecryptionKey(encryptedKey.Value, out bookkey_plaintext_bytes);
 
-                var bookkey_ciphertext_bytes  = Convert.FromBase64String(encryptedKey.Value);
 
-                bookkey_plaintext_bytes = rsa.Decrypt(bookkey_ciphertext_bytes, false);
-                string hex = BitConverter.ToString(bookkey_plaintext_bytes);
-                System.Console.WriteLine("Decrypted: " + hex);
-                
-            }
             var encryptionFile = inputZip["META-INF/encryption.xml"];
             XDocument encryptionXml = XDocument.Load(encryptionFile.OpenReader());
-            
+            //find a list of files that are encrypted in the epub.
             var encryptedFiles =
-                encryptionXml.Root.Elements(encryptionns + "EncryptedData").Elements(encryptionns+"CipherData").Elements(encryptionns+"CipherReference").Attributes("URI").Select(x=> x.Value.ToLowerInvariant());//"/CipherData/CipherReference");
-            //using (RijndaelManaged aes = new RijndaelManaged())
+                encryptionXml.Root.Elements(encryptionns + "EncryptedData").Elements(encryptionns + "CipherData").Elements(encryptionns + "CipherReference").Attributes("URI").Select(x => x.Value.ToLowerInvariant());//"/CipherData/CipherReference");
+
             using (AesCryptoServiceProvider aes = new AesCryptoServiceProvider())
             {
 
                 aes.Mode = CipherMode.CBC;
                 aes.Key = bookkey_plaintext_bytes;
                 aes.IV = new byte[] { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
+                // Create a decrytor to perform the stream transform.
+                ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
+
 
                 foreach (var zipEntry in inputZip)
                 {
@@ -91,56 +103,41 @@ namespace DeDRM.Library.Kobo.Epub
                     {
                         if (encryptedFiles.Contains(zipEntry.FileName.ToLowerInvariant()))
                         {
-                            // Create a decrytor to perform the stream transform.
-                            ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
-
-                            using (var msDecrypt = new MemoryStream())
+                            //decrypt files. 
+                            byte[] plainBytes;
+                            using (var msDecrypt = zipEntry.OpenReader())
+                            using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
                             {
-                                zipEntry.Extract(msDecrypt);
-                                msDecrypt.Seek(0, System.IO.SeekOrigin.Begin);
+
+                                //copy the decrypted bytes into a plainBytes array. Makesure that only the required bytes are copied. 
                                 
-                                using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+                                using (var memoryStream = new MemoryStream())
                                 {
-                                    byte[] plainBytes;
-                                    using (var memoryStream = new MemoryStream())
-                                    {
-                                        csDecrypt.CopyTo(memoryStream);
-                                        //translated from: self._aes.decrypt(data)[16:] --skip the first 16 bytes.
-                                        plainBytes = memoryStream.ToArray().Skip(16).ToArray();
-
-
-                                        //translated from: data = data[:-ord(data[-1])]
-                                        //the last byte has a number of extra padding bytes that were added and now need to be removed. 
-                                        byte extraPaddingCount = plainBytes.Last();
-                                        plainBytes = plainBytes.Take(plainBytes.Length - extraPaddingCount).ToArray();
-
-                                        //Decompress using gzip
-                                        using (var plainZippedStream = new MemoryStream(plainBytes))
-                                        using (
-                                            var decompressor = new Ionic.Zlib.DeflateStream(plainZippedStream,
-                                                                                         CompressionMode.Decompress))
-                                        using(var plainStream = new MemoryStream())
-                                        {
-                                            decompressor.CopyTo(plainStream);
-                                            String output = Encoding.UTF8.GetString(plainStream.ToArray());
-
-                                            Console.WriteLine(output);
-                                        }
-
-                                            
-
-
-
-                                        
-                                    }
-
-
                                     
-                                    
+                                    csDecrypt.CopyTo(memoryStream);
+                                    //translated from: self._aes.decrypt(data)[16:] --skip the first 16 bytes.
+                                    plainBytes = memoryStream.ToArray();
+
+                                    //translated from: data = data[:-ord(data[-1])]
+                                    //the last byte has a number of extra padding bytes that were added and now need to be removed. 
+                                    byte extraPaddingCount = plainBytes.Last();
+                                    plainBytes = plainBytes.Skip(16).Take(plainBytes.Length - extraPaddingCount).ToArray();
                                 }
-
                             }
-                            
+
+                            //Decompress using gzip
+                            using (var plainZippedStream = new MemoryStream(plainBytes))
+                            using (var decompressor = new Ionic.Zlib.DeflateStream(plainZippedStream, CompressionMode.Decompress))
+                            using (var plainStream = new MemoryStream())
+                            {
+                                decompressor.CopyTo(plainStream);
+                                String output = Encoding.UTF8.GetString(plainStream.ToArray());
+
+                                Console.WriteLine(output);
+                            }
+
+
+
 
                         }
 
@@ -150,6 +147,7 @@ namespace DeDRM.Library.Kobo.Epub
                     catch (Exception ex)
                     {
                         //do nothing, gotta catch em all.
+                        throw ex;
                     }
 
 
