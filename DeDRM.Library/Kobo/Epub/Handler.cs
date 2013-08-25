@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Xml.XPath;
 using DeDRM.Library.Base;
+using Ionic.Zip;
 using Ionic.Zlib;
 
 namespace DeDRM.Library.Kobo.Epub
@@ -44,120 +45,93 @@ namespace DeDRM.Library.Kobo.Epub
             }
         }
 
-        public override void RemoveDrm(string outputFile)
+        public override void RemoveDrm(String inputZipFilePath, String outputZipFilePath)
         {
-            //ensure that book has DRM
-            Constants.DRMType drmType;
-
-            this.DetectDrm(out drmType);
-            if (drmType == Constants.DRMType.None)
-            {
-                throw new Exception("No Encryption Found");
-            }
-
-            var rightsFile = inputZip["META-INF/rights.xml"];
-            XDocument rightsXml = XDocument.Load(rightsFile.OpenReader());
-            var encryptedKey = rightsXml.Descendants(adeptns + "encryptedKey").FirstOrDefault();
-
-            if (encryptedKey == null || encryptedKey.Value.Length != 172)
-            {
-                throw new Exception("This is not a secure Adobe Adept ePub");
-            }
-
-            Byte[] bookkey_plaintext_bytes;
-            //Decrypt the bookkey using the encrypted key stored in the book. 
-            GenerateBookDecryptionKey(encryptedKey.Value, out bookkey_plaintext_bytes);
-
-
-            var encryptionFile = inputZip["META-INF/encryption.xml"];
-            XDocument encryptionXml = XDocument.Load(encryptionFile.OpenReader());
-            //find a list of files that are encrypted in the epub.
-            var encryptedFiles =
-                encryptionXml.Root.Elements(encryptionns + "EncryptedData").Elements(encryptionns + "CipherData").Elements(encryptionns + "CipherReference").Attributes("URI").Select(x => x.Value.ToLowerInvariant());//"/CipherData/CipherReference");
-
-            using (AesCryptoServiceProvider aes = new AesCryptoServiceProvider())
+            this.InputZipFilePath = inputZipFilePath;
+            this.OutputZipFilePath = outputZipFilePath;
+            using (ZipFile inputZip = ZipFile.Read(inputZipFilePath))
             {
 
-                aes.Mode = CipherMode.CBC;
-                aes.Key = bookkey_plaintext_bytes;
-                aes.IV = new byte[] { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
-                // Create a decrytor to perform the stream transform.
-                ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
+                //ensure that book has DRM
+                Constants.DRMType drmType;
 
-
-                foreach (var zipEntry in inputZip)
+                EpubHandler.DetectDrm(inputZip, out drmType);
+                if (drmType == Constants.DRMType.None)
                 {
-                    //Ignore specific unencypted files. //http://www.idpf.org/epub/30/spec/epub30-ocf.html#sec-container-metainf-encryption.xml
-                    if ((String.Compare(zipEntry.FileName, "mimetype", true) == 0) ||
-                        (String.Compare(zipEntry.FileName, "META-INF/rights.xml") == 0) ||
-                        (String.Compare(zipEntry.FileName, "META-INF/container.xml") == 0) ||
-                        (String.Compare(zipEntry.FileName, "META-INF/manifest.xml") == 0) ||
-                        (String.Compare(zipEntry.FileName, "META-INF/signatures.xml") == 0) ||
-                        (String.Compare(zipEntry.FileName, "META-INF/rights.xml") == 0) ||
-                        (String.Compare(zipEntry.FileName, "META-INF/encryption.xml") == 0))
-                    {
-                        continue;
-                    }
+                    throw new Exception("No Encryption Found");
+                }
 
-                    try
+                var rightsFile = inputZip["META-INF/rights.xml"];
+                XDocument rightsXml = XDocument.Load(rightsFile.OpenReader());
+                var encryptedKey = rightsXml.Descendants(adeptns + "encryptedKey").FirstOrDefault();
+
+                if (encryptedKey == null || encryptedKey.Value.Length != 172)
+                {
+                    throw new Exception("This is not a secure Adobe Adept ePub");
+                }
+
+                Byte[] bookkey_plaintext_bytes;
+                //Decrypt the bookkey using the encrypted key stored in the book. 
+                GenerateBookDecryptionKey(encryptedKey.Value, out bookkey_plaintext_bytes);
+
+
+                var encryptionFile = inputZip["META-INF/encryption.xml"];
+                XDocument encryptionXml = XDocument.Load(encryptionFile.OpenReader());
+                //find a list of files that are encrypted in the epub.
+                var encryptedFiles =
+                    encryptionXml.Root.Elements(encryptionns + "EncryptedData").Elements(encryptionns + "CipherData").Elements(encryptionns + "CipherReference").Attributes("URI").Select(x => x.Value.ToLowerInvariant()).ToList();//"/CipherData/CipherReference");
+
+                using (AesCryptoServiceProvider aes = new AesCryptoServiceProvider())
+                using(ZipFile outputZipFile = new ZipFile())
+                {
+                    //outputZipFile.UseUnicodeAsNecessary = true; //ensure the file names use unicode names?
+                    //outputZipFile.Encryption = EncryptionAlgorithm.None; //the file cannot be encrypted
+                    //outputZipFile.CompressionLevel = CompressionLevel.None; //the file cannot be compressed
+                    //outputZipFile.EmitTimesInWindowsFormatWhenSaving = false;
+
+                    aes.Mode = CipherMode.CBC;
+                    aes.Key = bookkey_plaintext_bytes;
+                    aes.IV = new byte[] { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
+
+                    EpubAesDecrypter epubAesDecryptor = new EpubAesDecrypter(inputZip, aes, encryptedFiles);
+
+                    // Create a decrytor to perform the stream transform.
+                    ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
+                    //add the mimetype file manually
+                    var mimetypeFile = inputZip["mimetype"];
+                    using (var mimetypeReader = mimetypeFile.OpenReader())
                     {
-                        if (encryptedFiles.Contains(zipEntry.FileName.ToLowerInvariant()))
+                        Byte[] mimetypeContent = new byte[mimetypeReader.Length];
+                        mimetypeReader.Read(mimetypeContent,0, mimetypeContent.Length);
+                        var e = outputZipFile.AddEntry("mimetype", mimetypeContent);
+                        e.EmitTimesInWindowsFormatWhenSaving = false;
+                        e.CompressionLevel = CompressionLevel.None;
+                    }
+                    
+                    foreach (var zipEntry in inputZip)
+                    {
+                        //Ignore specific unencypted files. //http://www.idpf.org/epub/30/spec/epub30-ocf.html#sec-container-metainf-encryption.xml
+                        if ((String.Compare(zipEntry.FileName, "mimetype", true) == 0) ||
+                            (String.Compare(zipEntry.FileName, "META-INF/rights.xml", true) == 0) ||
+                            (String.Compare(zipEntry.FileName, "META-INF/encryption.xml", true) == 0))
                         {
-                            //decrypt files. 
-                            byte[] plainBytes;
-                            using (var msDecrypt = zipEntry.OpenReader())
-                            using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
-                            {
-
-                                //copy the decrypted bytes into a plainBytes array. Makesure that only the required bytes are copied. 
-                                
-                                using (var memoryStream = new MemoryStream())
-                                {
-                                    
-                                    csDecrypt.CopyTo(memoryStream);
-                                    //translated from: self._aes.decrypt(data)[16:] --skip the first 16 bytes.
-                                    plainBytes = memoryStream.ToArray();
-
-                                    //translated from: data = data[:-ord(data[-1])]
-                                    //the last byte has a number of extra padding bytes that were added and now need to be removed. 
-                                    byte extraPaddingCount = plainBytes.Last();
-                                    plainBytes = plainBytes.Skip(16).Take(plainBytes.Length - extraPaddingCount).ToArray();
-                                }
-                            }
-
-                            //Decompress using gzip
-                            using (var plainZippedStream = new MemoryStream(plainBytes))
-                            using (var decompressor = new Ionic.Zlib.DeflateStream(plainZippedStream, CompressionMode.Decompress))
-                            using (var plainStream = new MemoryStream())
-                            {
-                                decompressor.CopyTo(plainStream);
-                                String output = Encoding.UTF8.GetString(plainStream.ToArray());
-
-                                Console.WriteLine(output);
-                            }
-
-
-
-
+                            //these files should not be included or will be manually added. 
+                            continue;
+                            
                         }
-
-
-
+                        outputZipFile.AddEntry(zipEntry.FileName, epubAesDecryptor.WriteEntry);
+                        
                     }
-                    catch (Exception ex)
-                    {
-                        //do nothing, gotta catch em all.
-                        throw ex;
-                    }
+                    //add the mimetype manually
 
+
+                    outputZipFile.Save(OutputZipFilePath);
 
                 }
             }
-
-
+            
         }
-
-
-
     }
+    
+
 }

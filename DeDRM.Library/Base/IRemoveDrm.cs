@@ -1,12 +1,12 @@
 ﻿using System;
 using System.IO;
+using Ionic.Zip;
 
 namespace DeDRM.Library.Base
 {
     interface IRemoveDrm
     {
-        void OpenFile(String inputFile);
-        Boolean DetectDrm(out Constants.DRMType drmType);
-        void RemoveDrm(String outputFile);
+        
+        void RemoveDrm(String inputZipFilePath, String outputZipFilePath);
     }
 }

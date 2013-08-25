@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DeDRM.Library.Base
 {
-    public class MobiHandler :IRemoveDrm
+    public class MobiHandler //:IRemoveDrm
     {
         public void OpenFile(string inputFile)
         {

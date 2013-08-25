@@ -29,8 +29,7 @@ namespace DeDRM.Console
 
 
             Handler epubParser = new Handler(derContent);
-            epubParser.OpenFile("C:\\test\\Partials.epub");
-            epubParser.RemoveDrm("C:\\test\\decrypted_partials.epub");
+            epubParser.RemoveDrm("C:\\test\\Partials.epub", "C:\\test\\decrypted_partials_new.epub");
 
 
 

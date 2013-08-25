@@ -12,18 +12,15 @@ namespace DeDRM.Library.Base
     public abstract class EpubHandler : IRemoveDrm
     {
         //Global Class Properties. 
-        public ZipFile inputZip { get; set; }
-
+        public String InputZipFilePath { get; set; }
+        public String OutputZipFilePath { get; set; }
         //NameSpaces
-        protected XNamespace adeptns = "http://ns.adobe.com/adept";
-        protected XNamespace applens = "http://itunes.apple.com/ns/epub";
-        protected XNamespace encryptionns = "http://www.w3.org/2001/04/xmlenc#";
-        public void OpenFile(string filePath)
-        {
-            inputZip = ZipFile.Read(filePath);
-        }
+        protected static XNamespace adeptns = "http://ns.adobe.com/adept";
+        protected static XNamespace applens = "http://itunes.apple.com/ns/epub";
+        protected static XNamespace encryptionns = "http://www.w3.org/2001/04/xmlenc#";
 
-        public Boolean DetectDrm(out Constants.DRMType drmType)
+
+        public static Boolean DetectDrm(ZipFile inputZip, out Constants.DRMType drmType)
         {
             drmType = Constants.DRMType.None;
             //inputZip["META-INF/encryption.xml"];
@@ -93,6 +90,6 @@ namespace DeDRM.Library.Base
             }
         }
 
-        public abstract void RemoveDrm(string outputFile);
+        public abstract void RemoveDrm(String inputZipFilePath, string outputZipFilePath);
     }
 }

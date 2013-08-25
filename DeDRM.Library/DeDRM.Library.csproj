@@ -47,6 +47,7 @@
     <Compile Include="Amazon\Mobi\MobiHeader.cs" />
     <Compile Include="Amazon\Mobi\Section.cs" />
     <Compile Include="Apple\Epub\iBook.cs" />
+    <Compile Include="Base\EpubAesDecrypter.cs" />
     <Compile Include="Base\EpubHandler.cs" />
     <Compile Include="Base\IRemoveDrm.cs" />
     <Compile Include="Base\MobiHandler.cs" />
