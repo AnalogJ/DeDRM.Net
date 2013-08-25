@@ -303,6 +303,14 @@ def _load_crypto_pycrypto():
     class AES(object):
         def __init__(self, key):
             self._aes = _AES.new(key, _AES.MODE_CBC, '\x00'*16)
+			
+            logging.info('AES Settings:');
+            logging.info('the keys for AES');
+            logging.info(":".join(y.encode('hex') for y in key))
+            logging.info(_AES.MODE_CBC)
+            test = '\x00'*16
+            logging.info(":".join(y.encode('hex') for y in test))
+			
 
         def decrypt(self, data):
             return self._aes.decrypt(data)
@@ -373,7 +381,11 @@ class Decryptor(object):
 
     def decrypt(self, path, data):
         if path in self._encrypted:
+            logging.info('decrypting file: '+ path);
             data = self._aes.decrypt(data)[16:]
+            logging.info(":".join(y.encode('hex') for y in data))
+            logging.info('indexing calculations == data[-1]: ' + data[-1].encode('hex'))
+            logging.info('indexing calculations == -ord(data[-1]): ' + str(-ord(data[-1])))
             data = data[:-ord(data[-1])]
             data = self.decompress(data)
         return data

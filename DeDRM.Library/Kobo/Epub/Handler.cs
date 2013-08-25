@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Xml.XPath;
 using DeDRM.Library.Base;
+using Ionic.Zlib;
 
 namespace DeDRM.Library.Kobo.Epub
 {
@@ -97,14 +98,44 @@ namespace DeDRM.Library.Kobo.Epub
                             {
                                 zipEntry.Extract(msDecrypt);
                                 msDecrypt.Seek(0, System.IO.SeekOrigin.Begin);
-
+                                
                                 using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
                                 {
-                                    using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                                    byte[] plainBytes;
+                                    using (var memoryStream = new MemoryStream())
                                     {
-                                        var plaintext = srDecrypt.ReadToEnd();
-                                        Console.WriteLine(plaintext);
+                                        csDecrypt.CopyTo(memoryStream);
+                                        //translated from: self._aes.decrypt(data)[16:] --skip the first 16 bytes.
+                                        plainBytes = memoryStream.ToArray().Skip(16).ToArray();
+
+
+                                        //translated from: data = data[:-ord(data[-1])]
+                                        //the last byte has a number of extra padding bytes that were added and now need to be removed. 
+                                        byte extraPaddingCount = plainBytes.Last();
+                                        plainBytes = plainBytes.Take(plainBytes.Length - extraPaddingCount).ToArray();
+
+                                        //Decompress using gzip
+                                        using (var plainZippedStream = new MemoryStream(plainBytes))
+                                        using (
+                                            var decompressor = new Ionic.Zlib.DeflateStream(plainZippedStream,
+                                                                                         CompressionMode.Decompress))
+                                        using(var plainStream = new MemoryStream())
+                                        {
+                                            decompressor.CopyTo(plainStream);
+                                            String output = Encoding.UTF8.GetString(plainStream.ToArray());
+
+                                            Console.WriteLine(output);
+                                        }
+
+                                            
+
+
+
+                                        
                                     }
+
+
+                                    
                                     
                                 }
 
